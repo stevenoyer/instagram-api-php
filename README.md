@@ -49,7 +49,7 @@ Then retrieve the user id in the JSON code.
 Then we will call a function to authenticate ourselves on instagram and retrieve a special code to have a short-lived token.
 
 ```php
-echo '<a href="' . $insta_api->getUserAuthUrl() . '" target="_blank">Get code for access token</a>'
+echo '<a href="' . $insta_api->getUserAuthUrl() . '" target="_blank">Get code for access token</a>';
 ```
 
 Click on the link and get the code in the URL.
