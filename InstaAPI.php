@@ -50,7 +50,7 @@ class InstaApi
      */
     public function longAccessToken(String $short_token)
     {
-        if ($short_token)
+        if (empty($short_token))
         {
             die('Please specify the short token.');
         }
@@ -100,7 +100,7 @@ class InstaApi
      */
     public function exchangeCodeInShortToken(String $code = '')
     {
-        if (!$code)
+        if (empty($code))
         {
             die('Please specify your code');
         }
@@ -129,7 +129,7 @@ class InstaApi
     public function refreshLongToken(String $long_token)
     {
 
-        if (!$long_token)
+        if (empty($long_token))
         {
             die('Please specify a long-lived token');
         }
@@ -195,7 +195,7 @@ class InstaApi
      */
     public function getUserInfo(String $access_token)
     {
-        if (!$access_token)
+        if (empty($access_token))
         {
             die('Please specify an access token');
         }
@@ -233,7 +233,7 @@ class InstaApi
     public function getUserMedias(String $access_token)
     {
 
-        if (!$access_token)
+        if (empty($access_token))
         {
             die('Please specify an access token');
         }
@@ -278,12 +278,12 @@ class InstaApi
      */
     public function getMediaInfo(String $media_id, bool $childrenOnly = false, String $access_token)
     {
-        if (!$media_id)
+        if (empty($media_id))
         {
             die('Please specify a media id');
         }
 
-        if (!$access_token)
+        if (empty($access_token))
         {
             die('Please specify an access token');
         }
